@@ -1,0 +1,272 @@
+/* Base Reset */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f4f6;
+}
+
+.home-container {
+  min-height: 100vh;
+}
+
+/* === Navbar Styling (shared for admin and home) === */
+.navbar,
+.navbaradmin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 1rem 2rem;
+  background-color: #002855; /* FILSCAP Blue */
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left,
+.navbar-center,
+.navbar-right,
+.navbaradmin-left,
+.navbaradmin-center,
+.navbaradmin-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left,
+.navbaradmin-left {
+  flex: 1;
+  gap: 1rem;
+}
+
+.navbar-center,
+.navbaradmin-center {
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar-right,
+.navbaradmin-right {
+  flex: 1;
+  justify-content: flex-end;
+  gap: 1rem;
+  white-space: nowrap;
+}
+
+.navbar-logo,
+.navbaradmin-logo {
+  height: 40px;
+}
+
+.navbar h1,
+.navbaradmin h1 {
+  font-size: 1.25rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* === Search Input === */
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: inset 0 0 0 1px #ccc;
+  font-size: 1rem;
+}
+
+/* === Welcome Text === */
+.welcome-text {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* === Buttons === */
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #ffffff;
+  color: #1e40af;
+}
+
+.btn-primary:hover {
+  background-color: #e0e7ff;
+}
+
+.btn-danger {
+  background-color: #d9534f;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c9302c;
+}
+
+/* === Terminology List === */
+.terminology-list {
+  padding: 2rem;
+  list-style: none;
+  margin: 0;
+}
+
+.terminology-item {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s;
+}
+
+.terminology-item:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.terminology-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.terminology-description {
+  color: #4b5563;
+  margin-top: 0.5rem;
+}
+
+.terminology-actions {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.terminology-actions a,
+.terminology-actions button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0.95rem;
+  text-decoration: underline;
+}
+
+.terminology-actions a {
+  color: #2563eb;
+}
+
+.terminology-actions button {
+  color: #dc2626;
+}
+
+.terminology-actions a:hover,
+.terminology-actions button:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+/* === Responsive Layout for Mobile Devices (≤768px) === */
+@media (max-width: 768px) {
+  .navbar,
+  .navbaradmin {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .navbar-left,
+  .navbar-center,
+  .navbar-right,
+  .navbaradmin-left,
+  .navbaradmin-center,
+  .navbaradmin-right {
+    flex: none;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar-right,
+  .navbaradmin-right {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .btn {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .search-input {
+    width: 90%;
+    max-width: 100%;
+  }
+
+  .welcome-text {
+    margin-bottom: 0.5rem;
+  }
+}
+/* src/app/home.css */
+
+/* ... other styles ... */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination-button:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.pagination-button.active {
+  background-color: #007bff;
+  color: white;
+  border: 1px solid #007bff;
+}
+
+/* Make sure fixed/inset-0 works relative to the viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure modal covers the whole screen */
+.modal-backdrop {
+  position: fixed;
+  inset: 0; /* top:0, right:0, bottom:0, left:0 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3); /* optional dim background */
+  z-index: 9999; /* keep it on top */
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

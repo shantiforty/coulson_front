@@ -1,0 +1,95 @@
+.edit-form {
+  background-color: #ffffff;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #1f2937;
+}
+
+.edit-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: #374151;
+}
+
+.form-input,
+.form-textarea {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px #2563eb;
+}
+
+.form-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Rounded pill-shaped primary button */
+.form-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem 2.5rem;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+  user-select: none;
+  border: none;
+}
+
+.form-button:hover {
+  background-color: #1e40af;
+  box-shadow: 0 6px 20px rgba(30, 64, 175, 0.6);
+}
+
+.form-button:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 8px rgba(30, 64, 175, 0.8);
+}
+.primary-button {
+  background-color: #2563eb;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.primary-button:hover {
+  background-color: #1e40af;
+}
+
+.secondary-button {
+  background-color: #ccc;
+  color: #000;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.secondary-button:hover {
+  background-color: #b3b3b3;
+}

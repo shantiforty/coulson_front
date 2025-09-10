@@ -1,0 +1,64 @@
+.ticketing-page {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.ticketing-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.ticket-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket-form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.ticket-form input,
+.ticket-form select,
+.ticket-form textarea {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.submit-button {
+  margin-top: 20px;
+  padding: 10px;
+  background: #9bacc0;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: #005bb5;
+}
+
+.back-btn {
+  margin-top: 10px;
+  padding: 10px;
+  background: #e0e0e0;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.back-btn:hover {
+  background: #ccc;
+}
+
+.contributors-page {
+  background-color: #557696;
+}
