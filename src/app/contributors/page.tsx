@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import "../Contributor.css";
+import "../contributor.css";
 import { useRouter } from "next/navigation";
 import { getContributors } from "../../services/api";
 import Image from "next/image";
